@@ -1,0 +1,10 @@
+Les modèles ont déjà été initialisés automatiquement par la commande django
+
+Dans articles/models.py :
+
+class Article(models.Model):
+    #add in thumbnail and author later on
+    title = models.CharField(max_length = 100)
+    slug = models.SlugField()
+    body = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)

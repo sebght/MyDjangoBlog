@@ -1,0 +1,12 @@
+python manage.py shell
+from articles.models import Article (à chaque shell)
+Article.objects.all() 		montre les requêtes actuelles
+article=Article() 		crée une nouvelle instance
+article.title="hello, world" 	attribue une valeur à un attribut de la classe
+article.save() 			sauvegarde dans la BDD
+
+Ajout dans la classe Article :
+def __str__(self):
+        return self.title
+
+permet de retourner le titre quand on appelle objects.all()

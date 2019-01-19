@@ -1,0 +1,6 @@
+Ajouter dans articles/models.py :
+def snippet(self):
+        return self.body[:50]
+
+On peut maintenant remplacer dans le template :
+<p>{{article.body}}</p> par <p>{{article.snippet}}</p>

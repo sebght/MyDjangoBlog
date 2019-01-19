@@ -1,0 +1,26 @@
+Pour lier des urls à des vues, il faut :
+
+Modifier urls.py
+
+from django.contrib import admin
+from django.conf.urls import url
+
+from . import views
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^about/$', views.about),
+    url(r'^$', views.homepage),
+]
+
+Créer views.py
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def about(request):
+    return HttpResponse('about')
+
+def homepage(request):
+    return HttpResponse('about')
+
+Et c'est tout !

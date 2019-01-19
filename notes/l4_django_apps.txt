@@ -1,0 +1,17 @@
+A la racine du projet
+python manage.py startapp articles
+
+Plein de choses sont créées automatiquement par Django.
+
+Ajouter 'articles' dans "INSTALLED_APPS" de settings.py
+
+Créer une vue propre à l'app articles, qui redirigera vers les bonnes méthodes de articles-views.py
+Rediriger dans djangonautic-urls.py vers articles-urls.py
+from django.conf.urls import url, include
+url(r'^articles/',include('articles.urls')),
+
+Pour les templates, il faut créer "articles/templates/articles" et mettre nos templates dedans
+
+Views ressemble à
+def article_list(request):
+    return render(request,'articles/article_list.html')

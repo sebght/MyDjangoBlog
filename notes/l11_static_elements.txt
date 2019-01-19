@@ -1,0 +1,12 @@
+Ajouter à urls.py :
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()
+
+A settings.py :
+STATICFILES_DIRS = {
+    os.path.join(BASE_DIR,"assets")
+}
+
+Et on créera dans la racine un dossier "assets" qui contiendra nos élements
+statiques.

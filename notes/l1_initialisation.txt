@@ -1,0 +1,7 @@
+Base de la base :
+installer Python & pip install django
+
+django-admin startproject djangonautic
+
+Le projet est initialisé, avec tous les fichiers de base.
+Pour tester le blog en local : python manage.py runserver

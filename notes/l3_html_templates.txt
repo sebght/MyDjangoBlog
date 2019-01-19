@@ -1,0 +1,9 @@
+mkdir templates (à la racine du projet)
+
+créer les fichiers "about.html" et "homepage.html"
+
+remplacer les return du fichier views
+def about(request):
+    return render(request, 'about.html')
+
+ajouter 'templates' dans la liste des dossiers de templates dans "settings.py"

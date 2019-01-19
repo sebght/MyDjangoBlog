@@ -1,0 +1,7 @@
+python manage.py migrate
+python manage.py makemigrations
+python manage.py migrate à nouveau, pour effectuer celle que l'on vient de créer
+
+A chaque fois qu'on rajoute des champs :
+- refaire makemigrations
+- refaire migrate

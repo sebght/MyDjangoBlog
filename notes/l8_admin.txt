@@ -1,0 +1,11 @@
+python manage.py createsuperuser
+et suivre les étapes pour créer le user ayant accès à admin
+
+Django crée une UI pour les admins automatiquement à la création du projet
+(très jolie)
+
+Ajout des Article's models dans la partie Admin :
+dans articles/admin.py
+admin.site.register(Article) .... et c'est bon !
+
+On peut interagir avec le modèle comme on veut avec cette UI

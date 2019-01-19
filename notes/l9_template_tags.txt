@@ -1,0 +1,22 @@
+Dans articles/views.py :
+from django.shortcuts import render
+from .models import Article
+
+# Create your views here.
+def article_list(request):
+    articles = Article.objects.all().order_by('date')
+    return render(request,'articles/article_list.html',{'articles':articles})
+
+Dans articles/templates/articles/article_list.html :
+<body>
+    <h1>Article List</h1>
+    <div class="articles">
+      {% for article in articles %}
+      <div class="article">
+        <h2><a href="#">{{article.title}}</a></h2>
+        <p>{{article.body}}</p>
+        <p>{{article.date}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
