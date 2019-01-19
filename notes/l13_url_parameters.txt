@@ -1,0 +1,8 @@
+Ajout dans articles/urls.py :
+url(r'^(?P<slug>[\w-]+)/$',views.article_detail),
+
+dans views.py :
+def article_detail(request,slug):
+    return HttpResponse(slug)
+
+Il reste maintenant à faire le lien entre le slug de l'article et l'url

@@ -1,0 +1,10 @@
+dans articles/urls.py :
+app_name = 'articles' pour que les noms d'urls linkent aux bonnes vues
+
+dans base_layout.html, dans le wrapper :
+<h1><a href="{% url 'articles:list' %}"><img src="{% static 'logo.png' %}"></a></h1>
+Cela mettra le onClickAction sur le logo qui redirige vers la liste
+
+idem dans article_list.html :
+<h2><a href="{% url 'articles:detail' slug=article.slug %}">{{article.title}}</a></h2>
+pour rajouter le onClickAction sur le titre
